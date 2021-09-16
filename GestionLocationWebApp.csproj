@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="EntityFramework" Version="6.4.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+      <PackageReference Include="MySql.Data" Version="8.0.26" />
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Models\Entities\Objet.cs" />
+      <Compile Remove="Views\Achat\**" />
+      <Compile Remove="Views\User\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Views\Achat\**" />
+      <EmbeddedResource Remove="Views\User\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Views\Achat\**" />
+      <None Remove="Views\User\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Views\Achat\**" />
+      <Content Remove="Views\User\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Achat\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Achat\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Achat\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Achat\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Achat\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Services" />
+    </ItemGroup>
+
+</Project>
